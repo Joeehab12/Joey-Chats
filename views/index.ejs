@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %>, a platform for chatting and communicating with your friends. </p>
+    <form action = "main" method = "post" name = "login" id = "login">
+      <br>Already have an account? Sign in.<br><br>
+      Email: <input id = "loginEmail" name = "loginEmail" type = "text" />            Password: <input id = "loginPassword" name = "loginPassword" type = "password"/><br>
+      <button type = "submit">Login</button>
+
+    </form>
+    <form action = "main" method = "post" name = "signup" id = "signup">
+      <br>Don't have an account yet? Sign up it's free. <br><br>
+      First Name: <input id = "firstName" name = "firstName" type = "text" />       Last Name: <input id = "lastName" name = "lastName" type = "text"/><br>
+      Email: <input id = "signupEmail" name = "signupEmail" type = "text" />            Password: <input id = "signupPassword" name = "signupPassword" type = "password"/><br>
+      <button type = "submit">Sign Up</button>
+
+    </form>
+  </body>
+</html>

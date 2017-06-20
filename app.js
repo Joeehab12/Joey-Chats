@@ -5,10 +5,17 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
+
+var mongodb = require('mongodb');
 var index = require('./routes/index');
 var main = require('./routes/main');
 
 var app = express();
+
+
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,14 +52,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/mydb";
-
-MongoClient.connect(url,function(err,db){
-    if (err) throw err;
-    console.log("Database created!");
-    db.close();
-});
 
 
 module.exports = app;
